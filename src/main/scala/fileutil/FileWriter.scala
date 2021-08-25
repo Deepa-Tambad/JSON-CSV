@@ -4,7 +4,7 @@ import model._
 import scala.util.{Failure, Success, Try}
 object FileWriter {
 
-  def convertJsonToCsv(trainers: Trainers, outputPath: String, errorPath: String): Any = {
+  def convertJsonToCsv(trainers: Trainers, outputPath: String): Any = {
     val fieldTrainersNames = trainers.trainer.head.productElementNames
     val field_Value: List[Trainer] = trainers.trainer
     Try(new PrintWriter(outputPath)) match {
